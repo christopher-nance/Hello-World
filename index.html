@@ -79,6 +79,12 @@
         <br /><br />
         <div style="text-align: center;">
             <p class="compatibilityscore" id="compatibility"></p>
+            <br />
+            <p class="summarylist" id="question1a"></p>
+            <p class="summarylist" id="question2a"></p>
+            <p class="summarylist" id="question3a"></p>
+            <p class="summarylist" id="question4a"></p>
+            <p class="summarylist" id="question5a"></p>
         </div>
         <br /><br />
         <button class="glowhover" id="calcCompatibility" onclick="calculateCompatibility()">Calculate Score</button>
@@ -142,23 +148,33 @@
                 console.log('Compiled Compatibility Score ', compatibility)
 
                 if (compatibility < 50) {
-                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[4] + ' You are '+ compatibility+ '% compatible with me. ')
+                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[4] + ' You are '+ compatibility+ '% compatible with me.')
                 }
                 if (compatibility > 50) {
-                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[3] + ' You are '+ compatibility+ '% compatible with me. ')
+                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[3] + ' You are '+ compatibility+ '% compatible with me.')
                 }
                 if (compatibility > 60) {
-                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[2] + ' You are '+ compatibility+ '% compatible with me. ')
+                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[2] + ' You are '+ compatibility+ '% compatible with me.')
                 }
                 if (compatibility > 70) {
-                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[1] + ' You are '+ compatibility+ '% compatible with me. ')
+                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[1] + ' You are '+ compatibility+ '% compatible with me.')
                 }
                 if (compatibility > 90) {
-                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[0] + ' You are '+ compatibility+ '% compatible with me. ')
+                    document.getElementById('compatibility').innerHTML = (ANSWER_OUTPUT[0] + ' You are '+ compatibility+ '% compatible with me.')
                 }
+                document.getElementById('question1a').innerHTML = ('Question 1: ' + question1Compatibility + '/5 points')
+                document.getElementById('question2a').innerHTML = ('Question 2: ' + question2Compatibility + '/5 points')
+                document.getElementById('question3a').innerHTML = ('Question 3: ' + question3Compatibility + '/5 points')
+                document.getElementById('question4a').innerHTML = ('Question 4: ' + question4Compatibility + '/5 points')
+                document.getElementById('question5a').innerHTML = ('Question 5: ' + question5Compatibility + '/5 points')
 
             } else {
                 document.getElementById('compatibility').innerHTML = 'Uh Oh, you need to answer ALL questions.'
+                document.getElementById('question1a').innerHTML = ('')
+                document.getElementById('question2a').innerHTML = ('')
+                document.getElementById('question3a').innerHTML = ('')
+                document.getElementById('question4a').innerHTML = ('')
+                document.getElementById('question5a').innerHTML = ('')
             }
         }
 

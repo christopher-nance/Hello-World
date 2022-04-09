@@ -57,6 +57,12 @@ label {
     font-size: 1.5em;
 }
 
+.summarylist {
+    color: crimson;
+    text-align: center;
+    font-size: larger;
+}
+
 .compatibilityscore {
     color:#00ffd5;
     font-size: x-large;
